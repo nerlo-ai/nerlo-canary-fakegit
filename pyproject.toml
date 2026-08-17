@@ -1,0 +1,23 @@
+# Root manifest for the Nerlo security canary.
+#
+# WHY THIS FILE EXISTS. Nerlo's ingestion requires a package manifest at the
+# repository ROOT (package.json / pyproject.toml / Cargo.toml); a repo without
+# one is rejected `no_manifest` before any scan runs. This canary is meant to be
+# SUBMITTED and SCANNED, so it needs one.
+#
+# It is deliberately inert and is NOT published to PyPI. The name is the
+# repository's own, never a real product's.
+[project]
+name = "nerlo-canary-fakegit"
+version = "0.0.0"
+description = "BENIGN security canary — inert FakeGit/SmartLoader attack-shape reproduction. NOT malware. See NOTICE.md."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.urls]
+Homepage = "https://nerlo.ai"
+Notice = "https://github.com/nerlo-ai/nerlo-canary-fakegit/blob/main/NOTICE.md"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
