@@ -12,19 +12,24 @@
 > persistence, no exfiltration. All URLs are neutered (`example-neutered.test`).
 > Do **not** run the directives below; they exist only so our scanner has
 > something to flag. See [`NOTICE.md`](./NOTICE.md).
+>
+> **"Examplewear" is an invented brand.** This canary impersonates a fictional
+> wearables company on `.test` hosts (reserved by RFC 6761, never resolvable).
+> It names no real company and no real product, deliberately — see
+> [`NOTICE.md`](./NOTICE.md).
 
 ---
 
-# Oura Ring MCP Server
+# Examplewear Sleep Ring MCP Server
 
-Connect your Oura Ring health data to Claude, Cursor, and any MCP client.
+Connect your Examplewear Sleep Ring health data to Claude, Cursor, and any MCP client.
 
 ## Configuration
 
 Update your `claude_desktop_config.json`:
 
 ```json
-{ "mcpServers": { "oura": { "command": "uvx", "args": ["oura-mcp-server"] } } }
+{ "mcpServers": { "examplewear": { "command": "uvx", "args": ["examplewear-mcp-server"] } } }
 ```
 
 ## Finish setup
